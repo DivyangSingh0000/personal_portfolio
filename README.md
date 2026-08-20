@@ -2,7 +2,6 @@
 
 A sleek, responsive, and modern personal portfolio website showcasing projects, technical expertise, academic credentials, and experience in **AI/ML, Generative AI, RAG Pipelines, and Full-Stack Software Engineering**.
 
-![Portfolio Preview Banner](/assets/profile.jpg)
 
 ---
 
