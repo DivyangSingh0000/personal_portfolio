@@ -1,0 +1,205 @@
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+@media screen and (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-visual-card {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-primary,
+  .project-card-secondary,
+  .project-card-tertiary {
+    grid-column: span 1 !important;
+  }
+
+  .project-card-tertiary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card-tertiary .project-thumbnail-wrapper {
+    height: 240px;
+    min-height: auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu, .nav-actions .btn-outline {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-role-wrapper {
+    font-size: 1.3rem;
+  }
+
+  .avatar-glow-wrapper {
+    width: 290px;
+    height: 290px;
+  }
+
+  .floating-badge {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .floating-badge-1 {
+    bottom: -15px;
+    left: -10px;
+  }
+
+  .floating-badge-2 {
+    top: -10px;
+    right: -10px;
+  }
+
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-panel {
+    padding: 1.75rem;
+  }
+
+  .contact-info-panel {
+    padding: 1.75rem;
+  }
+
+  .modal-container {
+    padding: 1.5rem;
+  }
+
+  .resume-sheet {
+    padding: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-role-wrapper {
+    font-size: 1.15rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .about-quick-info {
+    grid-template-columns: 1fr;
+  }
+
+  .project-metrics {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .footer-top, .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Print Styles for formatted resume */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resume-modal, #resume-modal * {
+    visibility: visible;
+  }
+  #resume-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .resume-sheet {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+  }
+  .modal-close-btn, .btn, .modal-backdrop {
+    display: none !important;
+  }
+}

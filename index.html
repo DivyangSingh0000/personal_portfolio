@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divyang Singh Somvanshi | Software Engineer</title>
+    <meta name="description" content="Personal portfolio of Divyang Singh Somvanshi - Computer Science Engineer specializing in AI/ML, Generative AI, RAG Pipelines, and Data Analytics." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Ambient Lighting Blobs -->
+    <div class="bg-ambient" aria-hidden="true">
+      <div class="ambient-blob-1"></div>
+      <div class="ambient-blob-2"></div>
+      <div class="ambient-blob-3"></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-logo" id="brand-logo-btn">
+          <div class="logo-badge">DS</div>
+        </a>
+
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
+            <li><a href="#projects" class="nav-link" id="nav-link-projects">Projects</a></li>
+            <li><a href="#skills" class="nav-link" id="nav-link-skills">Skills</a></li>
+            <li><a href="#education" class="nav-link" id="nav-link-education">Education</a></li>
+            <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-outline btn-sm open-resume-modal" id="nav-resume-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>Resume</span>
+          </button>
+          <a href="#contact" class="btn btn-primary btn-sm" id="nav-hire-btn">Get in Touch</a>
+          <button class="mobile-nav-toggle" id="mobile-toggle-btn" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+    <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+      <div>
+        <div class="mobile-drawer-header">
+          <div class="brand-logo">
+            <div class="logo-badge">DS</div>
+            <span>Divyang Singh</span>
+          </div>
+          <button class="mobile-drawer-close" id="mobile-close-btn" aria-label="Close menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <ul class="mobile-menu-links">
+          <li><a href="#about" class="mobile-menu-link">About Me</a></li>
+          <li><a href="#projects" class="mobile-menu-link">Featured Projects</a></li>
+          <li><a href="#skills" class="mobile-menu-link">Skills & Expertise</a></li>
+          <li><a href="#education" class="mobile-menu-link">Education & Certifications</a></li>
+          <li><a href="#contact" class="mobile-menu-link">Contact</a></li>
+        </ul>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <button class="btn btn-outline w-full open-resume-modal">View Full Resume</button>
+        <a href="#contact" class="btn btn-primary w-full">Hire Me</a>
+      </div>
+    </aside>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section id="hero" class="section">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="status-badge" id="hero-status-beacon">
+              <span class="status-dot"></span>
+              <span>Open to GenAI & Data Analyst Roles</span>
+            </div>
+
+            <p class="hero-greeting">Hi, my name is</p>
+            <h1 class="hero-title">
+              <span class="text-gradient">Divyang Singh</span><br />
+              <span>Somvanshi</span>
+            </h1>
+
+            <div class="hero-role-wrapper">
+              <span>I specialize in</span>
+              <span class="hero-role-typed" id="role-typed">AI / ML Engineer</span>
+            </div>
+
+            <p class="hero-description">
+              Computer Science Engineer building end-to-end LLM-based agentic workflows, RAG pipelines, and high-throughput RESTful backends. Passionate about turning messy, real-world data into reliable, production-ready AI systems.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary" id="hero-view-work-btn">
+                <span>View My Work</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary" id="hero-contact-btn">
+                <span>Get in Touch</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <button class="btn btn-outline open-resume-modal" id="hero-resume-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Resume</span>
+              </button>
+            </div>
+
+            <div class="hero-socials">
+              <span class="social-label">Connect</span>
+              <div class="social-links-list">
+                <a href="https://github.com/DivyangSingh0000/" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub Profile" id="hero-github-link">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/divyang-somvanshi/" target="_blank" rel="noopener noreferrer" class="btn-icon" title="LinkedIn Profile" id="hero-linkedin-link">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="mailto:singhdivyang308@gmail.com" class="btn-icon" title="Send Email" id="hero-email-link">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Avatar -->
+          <div class="hero-visual">
+            <div class="avatar-glow-wrapper">
+              <div class="avatar-image-container">
+                <img src="/assets/profile.jpg" alt="Divyang Singh Somvanshi - AI/ML & Software Engineer" class="hero-avatar-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS SECTION (BENTO GRID) -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Selected Work</div>
+            <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+            <p class="section-subtitle">
+              Production-grade AI architectures, semantic vector search engines, and real-time predictive systems.
+            </p>
+          </div>
+
+          <div class="bento-grid">
+            <!-- Project 1: AI Research Paper Analysis Tool (Primary Span) -->
+            <article class="project-card project-card-primary" id="project-card-rag">
+              <div class="project-thumbnail-wrapper">
+                <img src="/assets/project-rag.jpg" alt="AI Research Paper Analysis Tool Preview" class="project-thumb-img" />
+                <span class="project-badge-overlay">GenAI / RAG Architecture</span>
+                <span class="project-date-overlay">Feb – Mar 2026</span>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">AI Research Paper Analysis Tool</h3>
+                <p class="project-description">
+                  Engineered an end-to-end RAG pipeline using FAISS vector database and Sentence Transformers, enabling sub-2s semantic query latency and cutting manual document comprehension from 45m to <5m.
+                </p>
+
+                <div class="project-metrics">
+                  <div class="metric-item">
+                    <div class="metric-value">92%</div>
+                    <div class="metric-label">Retrieval Accuracy</div>
+                  </div>
+                  <div class="metric-item">
+                    <div class="metric-value">&lt;2s</div>
+                    <div class="metric-label">Query Latency</div>
+                  </div>
+                  <div class="metric-item">
+                    <div class="metric-value">150+</div>
+                    <div class="metric-label">Papers Indexed</div>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag tag-highlight">Python</span>
+                  <span class="tag tag-highlight">FastAPI</span>
+                  <span class="tag tag-highlight">LangChain</span>
+                  <span class="tag">PyTorch</span>
+                  <span class="tag">FAISS</span>
+                  <span class="tag">Sentence Transformers</span>
+                </div>
+
+                <div class="project-footer">
+                  <button class="btn btn-outline btn-sm open-project-details" data-project="rag-paper">
+                    <span>View Architecture</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                  </button>
+                  <a href="https://github.com/DivyangSingh0000/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Smart Study Chat App (Secondary Span) -->
+            <article class="project-card project-card-secondary" id="project-card-chat">
+              <div class="project-thumbnail-wrapper">
+                <img src="/assets/project-chat.jpg" alt="Smart Study Chat App Preview" class="project-thumb-img" />
+                <span class="project-badge-overlay">Multi-PDF AI Assistant</span>
+                <span class="project-date-overlay">Jun – Jul 2025</span>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Smart Study Chat App</h3>
+                <p class="project-description">
+                  Multi-PDF AI conversational platform handling 20+ concurrent document uploads with semantic similarity search and optimized token chunking.
+                </p>
+
+                <div class="project-metrics">
+                  <div class="metric-item">
+                    <div class="metric-value">>85%</div>
+                    <div class="metric-label">Context Match</div>
+                  </div>
+                  <div class="metric-item">
+                    <div class="metric-value">1.2s</div>
+                    <div class="metric-label">Optimized Latency</div>
+                  </div>
+                  <div class="metric-item">
+                    <div class="metric-value">+30%</div>
+                    <div class="metric-label">Relevance Gain</div>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag tag-highlight">OpenAI API</span>
+                  <span class="tag tag-highlight">Streamlit</span>
+                  <span class="tag">LangChain</span>
+                  <span class="tag">FAISS</span>
+                  <span class="tag">Hugging Face</span>
+                </div>
+
+                <div class="project-footer">
+                  <button class="btn btn-outline btn-sm open-project-details" data-project="study-chat">
+                    <span>Details</span>
+                  </button>
+                  <a href="https://github.com/DivyangSingh0000/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Code</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Stock Market Portfolio Tracker (Full Width Bento) -->
+            <article class="project-card project-card-tertiary" id="project-card-stock">
+              <div class="project-thumbnail-wrapper">
+                <img src="/assets/project-stock.jpg" alt="Stock Market Portfolio Tracker Preview" class="project-thumb-img" />
+                <span class="project-badge-overlay">Financial ML & NLP Analytics</span>
+                <span class="project-date-overlay">May – Jun 2025</span>
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Stock Market Portfolio Tracker</h3>
+                <p class="project-description">
+                  Built a predictive portfolio analytics platform with real-time stock dashboards, Random Forest & Linear Regression trend forecasting, technical indicators (RSI, MACD), and VADER news sentiment analysis.
+                </p>
+
+                <div class="project-metrics">
+                  <div class="metric-item">
+                    <div class="metric-value">3.2%</div>
+                    <div class="metric-label">Mean Absolute Error</div>
+                  </div>
+                  <div class="metric-item">
+                    <div class="metric-value">15+</div>
+                    <div class="metric-label">Live Stocks Monitored</div>
+                  </div>
+                  <div class="metric-item">
+                    <div class="metric-value">+18%</div>
+                    <div class="metric-label">Decision Signal Lift</div>
+                  </div>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag tag-highlight">Python</span>
+                  <span class="tag tag-highlight">Scikit-learn</span>
+                  <span class="tag">Pandas</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Matplotlib</span>
+                  <span class="tag">VADER Sentiment</span>
+                  <span class="tag">BeautifulSoup</span>
+                </div>
+
+                <div class="project-footer">
+                  <button class="btn btn-outline btn-sm open-project-details" data-project="stock-tracker">
+                    <span>View Analytics Model</span>
+                  </button>
+                  <a href="https://github.com/DivyangSingh0000/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub Repository</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS & EXPERTISE SECTION -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Technical Stack</div>
+            <h2 class="section-title">Skills & <span class="text-gradient">Expertise</span></h2>
+            <p class="section-subtitle">
+              Comprehensive toolkit spanning cutting-edge Generative AI, distributed data pipelines, and core engineering fundamentals.
+            </p>
+          </div>
+
+          <!-- Skills Category Filter Tabs -->
+          <div class="skills-tabs">
+            <button class="skills-tab-btn active" data-filter="all">All Skills</button>
+            <button class="skills-tab-btn" data-filter="ai-ml">AI & ML / GenAI</button>
+            <button class="skills-tab-btn" data-filter="backend">Backend & APIs</button>
+            <button class="skills-tab-btn" data-filter="data">Data & Analytics</button>
+            <button class="skills-tab-btn" data-filter="prog">Programming</button>
+            <button class="skills-tab-btn" data-filter="cloud">Cloud & Tools</button>
+          </div>
+
+          <div class="skills-categories-grid">
+            <!-- Category 1: AI / ML -->
+            <div class="skill-category-card" data-category="ai-ml">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7.003 7.003 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7.003 7.003 0 0 1 11 3.07V3a1 1 0 0 1 2 0v.07A7.003 7.003 0 0 1 18.93 9H19a1 1 0 0 1 0 2h-.07A7.003 7.003 0 0 1 13 16.93z"></path></svg>
+                </div>
+                <h3 class="skill-category-title">AI, ML & Generative AI</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Scikit-learn</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>PyTorch</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Hugging Face Transformers</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>LangChain</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>RAG Pipelines</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Model Context Protocol (MCP)</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Vector Embeddings</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Agentic Workflows</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Prompt Engineering</div>
+              </div>
+            </div>
+
+            <!-- Category 2: Programming Languages -->
+            <div class="skill-category-card" data-category="prog">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <h3 class="skill-category-title">Programming Languages</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Python (Advanced)</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>C++</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>SQL</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>JavaScript / TypeScript</div>
+              </div>
+            </div>
+
+            <!-- Category 3: APIs & Backend -->
+            <div class="skill-category-card" data-category="backend">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                </div>
+                <h3 class="skill-category-title">APIs & Backend Systems</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="skill-pill-dot"></span>FastAPI</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>RESTful API Design</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>FAISS (Vector Database)</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Docker</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Database Schema Design</div>
+              </div>
+            </div>
+
+            <!-- Category 4: Data & Analytics -->
+            <div class="skill-category-card" data-category="data">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <h3 class="skill-category-title">Data & Analytics</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="skill-pill-dot"></span>NumPy</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Pandas</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Matplotlib</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Seaborn</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Cross-Validation</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Power BI</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Statistical Modeling</div>
+              </div>
+            </div>
+
+            <!-- Category 5: Cloud & Developer Tools -->
+            <div class="skill-category-card" data-category="cloud">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </div>
+                <h3 class="skill-category-title">Cloud & Developer Tools</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="skill-pill-dot"></span>AWS (Basics)</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Git & GitHub</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Visual Studio Code</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Streamlit</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Jupyter Notebooks</div>
+              </div>
+            </div>
+
+            <!-- Category 6: CS Fundamentals & Soft Skills -->
+            <div class="skill-category-card" data-category="prog">
+              <div class="skill-category-header">
+                <div class="skill-category-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                </div>
+                <h3 class="skill-category-title">CS Fundamentals & Leadership</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Data Structures & Algorithms</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Object-Oriented Programming (OOP)</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Public Relations & Tech Fest Outreach</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Cross-Functional Collaboration</div>
+                <div class="skill-pill"><span class="skill-pill-dot"></span>Technical Problem Solving</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT ME SECTION -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Background</div>
+            <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+            <p class="section-subtitle">
+              Passionate engineer committed to analytical precision, rigorous algorithms, and real-world impact.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Left Column: Visual Profile Card -->
+            <div class="about-visual-card">
+              <div class="about-photo-wrapper">
+                <img src="/assets/profile.jpg" alt="Divyang Singh Somvanshi" class="about-photo" />
+              </div>
+              <div class="about-quick-info">
+                <div class="quick-info-item">
+                  <span>Degree</span>
+                  <strong>B.Tech CSE (SRM IST)</strong>
+                </div>
+                <div class="quick-info-item">
+                  <span>Graduation</span>
+                  <strong>May 2026</strong>
+                </div>
+                <div class="quick-info-item">
+                  <span>Specialization</span>
+                  <strong>AI / ML & GenAI</strong>
+                </div>
+                <div class="quick-info-item">
+                  <span>Academic CGPA</span>
+                  <strong>8.0 / 10.0</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Biography & Highlights -->
+            <div class="about-bio">
+              <p class="about-lead-text">
+                I am a <mark>Computer Science Engineer</mark> specializing in <strong>AI/ML, Generative AI, and Data Analytics</strong>. I bring strong fundamentals in Python, data structures, and algorithms, with hands-on experience building <mark>LLM-based agentic workflows</mark>, RAG pipelines, and RESTful APIs backed by solid database and data-pipeline design.
+              </p>
+              <p>
+                Analytical, accountable, and passionate about turning messy, real-world data into reliable, production-ready systems while collaborating openly across cross-functional teams.
+              </p>
+
+              <div class="about-highlights-grid">
+                <div class="highlight-box">
+                  <div class="highlight-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  </div>
+                  <div class="highlight-text">
+                    <h4>End-to-End Pipelines</h4>
+                    <p>From PDF parsing, chunking, and embedding to high-throughput REST API inference.</p>
+                  </div>
+                </div>
+
+                <div class="highlight-box">
+                  <div class="highlight-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  </div>
+                  <div class="highlight-text">
+                    <h4>Leadership & PR</h4>
+                    <p>Public Relations member for national fests (RoboWars, CodePen) with 5,000+ attendees.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                <button class="btn btn-primary open-resume-modal">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                  <span>View Full Resume</span>
+                </button>
+                <a href="#contact" class="btn btn-secondary">
+                  <span>Contact Me</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION & CERTIFICATIONS SECTION -->
+      <section id="education" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Academic & Credentials</div>
+            <h2 class="section-title">Education & <span class="text-gradient">Certifications</span></h2>
+            <p class="section-subtitle">
+              Formal academic foundation combined with continuous industry learning.
+            </p>
+          </div>
+
+          <div class="timeline-grid">
+            <!-- Education Column -->
+            <div class="timeline-column">
+              <div class="timeline-column-header">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <h3>Education</h3>
+              </div>
+              <div class="timeline-items-list">
+                <div class="timeline-item">
+                  <div class="timeline-period">Sep 2022 – May 2026</div>
+                  <h4 class="timeline-title">Bachelor of Technology (B.Tech) in CSE</h4>
+                  <div class="timeline-org">SRM Institute of Science and Technology, Ghaziabad, India</div>
+                  <span class="timeline-meta">CGPA: 8.0 / 10.0</span>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-period">2021 – 2022</div>
+                  <h4 class="timeline-title">Senior Secondary School (XII)</h4>
+                  <div class="timeline-org">St. Xavier’s Senior Secondary School (CBSE)</div>
+                  <span class="timeline-meta">Percentage: 68.83%</span>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-period">2019 – 2020</div>
+                  <h4 class="timeline-title">Secondary School (X)</h4>
+                  <div class="timeline-org">St. Xavier’s Senior Secondary School (CBSE)</div>
+                  <span class="timeline-meta">Percentage: 89.00%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certifications & Leadership Column -->
+            <div class="timeline-column">
+              <div class="timeline-column-header">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                <h3>Certifications & Leadership</h3>
+              </div>
+              <div class="timeline-items-list">
+                <div class="timeline-item">
+                  <div class="timeline-period">Oracle University • 2025</div>
+                  <h4 class="timeline-title">OCI AI Foundations Associate</h4>
+                  <div class="timeline-org">Oracle Cloud Infrastructure Generative AI & ML Foundations</div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-period">NPTEL • 2024</div>
+                  <h4 class="timeline-title">Database Management System (DBMS)</h4>
+                  <div class="timeline-org">Relational databases, normal forms, indexing & SQL queries</div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-period">Coursera</div>
+                  <h4 class="timeline-title">Machine Learning Specialization</h4>
+                  <div class="timeline-org">Supervised & Unsupervised Learning, Regression, Classification</div>
+                </div>
+
+                <div class="timeline-item">
+                  <div class="timeline-period">INNOVATE 2024 • National Tech Fest</div>
+                  <h4 class="timeline-title">Public Relations Member</h4>
+                  <div class="timeline-org">Promoted event branding for RoboWars & CodePen competitions</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Get In Touch</div>
+            <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+            <p class="section-subtitle">
+              Have an opening, collaboration idea, or question? Feel free to reach out directly.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Left Column: Direct Info -->
+            <div class="contact-info-panel">
+              <div>
+                <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Contact Information</h3>
+                <p style="font-size: 0.95rem;">
+                  I'm actively looking for software engineering and AI/ML opportunities. Let's discuss how I can add value to your team.
+                </p>
+
+                <div class="contact-cards-list">
+                  <!-- Email Card -->
+                  <div class="contact-card-item">
+                    <div class="contact-card-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="contact-card-text" style="flex-grow: 1;">
+                      <span>Email Address</span>
+                      <a href="mailto:singhdivyang308@gmail.com">singhdivyang308@gmail.com</a>
+                    </div>
+                    <button class="btn btn-outline btn-sm copy-email-btn" title="Copy Email" style="padding: 0.35rem 0.6rem;">Copy</button>
+                  </div>
+
+                  <!-- Phone Card -->
+                  <div class="contact-card-item">
+                    <div class="contact-card-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="contact-card-text">
+                      <span>Phone / WhatsApp</span>
+                      <a href="tel:+918115330818">+91 8115330818</a>
+                    </div>
+                  </div>
+
+                  <!-- Profiles Card -->
+                  <div class="contact-card-item">
+                    <div class="contact-card-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </div>
+                    <div class="contact-card-text">
+                      <span>Social Profiles</span>
+                      <p style="font-size: 0.9rem; font-weight: 500;">
+                        <a href="https://linkedin.com/in/divyang-somvanshi/" target="_blank" rel="noopener noreferrer" style="color: var(--text-accent);">LinkedIn</a> • 
+                        <a href="https://github.com/DivyangSingh0000/" target="_blank" rel="noopener noreferrer" style="color: var(--text-accent);">GitHub</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                <button class="btn btn-outline w-full open-resume-modal">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Download Formatted Resume</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Form -->
+            <div class="contact-form-panel">
+              <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Sarah Jenkins" required />
+                  <div class="form-feedback">Please enter your name</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Your Email</label>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. sarah@company.com" required />
+                  <div class="form-feedback">Please enter a valid email</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject" class="form-label">Subject / Opportunity</label>
+                  <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Software Engineer / AI Role" />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Your Message</label>
+                  <textarea id="contact-message" name="message" class="form-textarea" placeholder="Hello Divyang, I reviewed your AI and RAG projects..." required></textarea>
+                  <div class="form-feedback">Please enter at least 5 characters</div>
+                </div>
+
+                <div id="form-success-banner" class="form-success-banner">
+                  🎉 Message Sent! Thank you for reaching out. I'll get back to you promptly.
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%; padding: 0.95rem;">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="brand-logo">
+            <div class="logo-badge">DS</div>
+            <div>
+              <div style="font-weight: 700; font-size: 1.1rem; color: #ffffff;">Divyang Singh Somvanshi</div>
+              <div style="font-size: 0.82rem; color: var(--text-muted);">AI/ML & Software Engineer</div>
+            </div>
+          </div>
+
+          <ul class="footer-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="https://github.com/DivyangSingh0000/" target="_blank" rel="noopener noreferrer" class="btn-icon" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/divyang-somvanshi/" target="_blank" rel="noopener noreferrer" class="btn-icon" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:singhdivyang308@gmail.com" class="btn-icon" title="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Divyang Singh Somvanshi. All rights reserved.</div>
+          <div>Built with clean semantic HTML5, modern dark CSS, and JavaScript.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back To Top Floating Trigger -->
+    <button id="back-to-top" aria-label="Back to Top" title="Scroll to Top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+
+    <!-- RESUME MODAL & PRINTABLE VIEW -->
+    <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+      <div class="modal-container">
+        <button class="modal-close-btn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <h3 id="resume-modal-title" style="font-size: 1.3rem;">Curriculum Vitae</h3>
+          <div style="display: flex; gap: 0.75rem;">
+            <button class="btn btn-secondary btn-sm" id="print-resume-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>Print / Save PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="resume-sheet">
+          <div class="resume-header">
+            <h1 class="resume-name">DIVYANG SINGH SOMVANSHI</h1>
+            <div class="resume-contact-bar">
+              <span>+91-8115330818</span>
+              <span>singhdivyang308@gmail.com</span>
+              <a href="https://github.com/DivyangSingh0000/" target="_blank" rel="noopener noreferrer" style="color: var(--text-accent);">github.com/DivyangSingh0000</a>
+              <a href="https://linkedin.com/in/divyang-somvanshi/" target="_blank" rel="noopener noreferrer" style="color: var(--text-accent);">linkedin.com/in/divyang-somvanshi</a>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="resume-section-title">SUMMARY</div>
+          <p style="color: #cbd5e1; font-size: 0.88rem; line-height: 1.6;">
+            Computer Science Engineer specializing in AI/ML, Generative AI, and Data Analytics. Brings strong fundamentals in Python, data structures and algorithms, with hands-on experience building LLM-based agentic workflows, RAG pipelines, and RESTful APIs backed by solid database and data-pipeline design. Analytical, accountable, and passionate about turning messy, real-world data into reliable, production-ready systems while collaborating openly across cross-functional teams.
+          </p>
+
+          <!-- Technical Skills -->
+          <div class="resume-section-title">TECHNICAL SKILLS</div>
+          <div style="font-size: 0.86rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 0.35rem;">
+            <div><strong>Programming:</strong> Python, C++, SQL</div>
+            <div><strong>AI / ML:</strong> Scikit-learn, PyTorch, Hugging Face Transformers, LangChain, RAG Pipelines, Model Context Protocol (MCP), Vector Embeddings, Agentic Workflows, Prompt Engineering</div>
+            <div><strong>APIs & Backend:</strong> FastAPI, RESTful API Design, FAISS (Vector Database), Docker</div>
+            <div><strong>Data & Analysis:</strong> NumPy, Pandas, Matplotlib, Seaborn, Cross-Validation, Power BI</div>
+            <div><strong>Cloud & Tools:</strong> AWS (Basics), Git/GitHub, Visual Studio Code, Streamlit, Jupyter</div>
+            <div><strong>CS Fundamentals:</strong> Data Structures & Algorithms, Object-Oriented Programming (OOP)</div>
+          </div>
+
+          <!-- Projects -->
+          <div class="resume-section-title">PROJECTS</div>
+          <div style="margin-bottom: 0.9rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff;">
+              <span>AI Research Paper Analysis Tool</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-accent);">Feb 2026 – Mar 2026</span>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--accent-primary); margin-bottom: 0.25rem;">Python, NLP, LLM, LangChain, PyTorch, FastAPI, FAISS</div>
+            <ul class="resume-bullet-list" style="font-size: 0.84rem;">
+              <li>Engineered a RAG pipeline using FAISS vector database and Sentence Transformers, achieving approximately 92% semantic similarity retrieval accuracy across 150+ research papers.</li>
+              <li>Built an end-to-end AI/ML data pipeline (PDF parsing, chunking, indexing, embedding, LLM-based Q&A) deployed via modular FastAPI backend handling 10+ concurrent queries with sub-2s latency, reducing manual review time by ~60%.</li>
+              <li>Integrated an LLM-based agentic summarization workflow to auto-generate structured research summaries, cutting document comprehension time from 45 minutes to under 5 minutes per paper.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 0.9rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff;">
+              <span>Smart Study Chat App</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-accent);">Jun 2025 – Jul 2025</span>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--accent-primary); margin-bottom: 0.25rem;">Python, Streamlit, OpenAI API, LangChain, FAISS</div>
+            <ul class="resume-bullet-list" style="font-size: 0.84rem;">
+              <li>Developed a multi-PDF AI question-answering application using Python, LangChain agents, and OpenAI API deployed on Streamlit Cloud supporting 20+ concurrent document uploads.</li>
+              <li>Implemented semantic similarity search via FAISS and Sentence Transformers, achieving >85% context-match accuracy across 1500+ test queries, cutting latency from 4s to 1.2s.</li>
+              <li>Integrated Hugging Face embedding models and iterated via user feedback loop to improve contextual understanding, raising answer relevance by ~30%.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 0.9rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #ffffff;">
+              <span>Stock Market Portfolio Tracker</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-accent);">May 2025 – Jun 2025</span>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--accent-primary); margin-bottom: 0.25rem;">Python, Pandas, SQL, Scikit-learn, Matplotlib, BeautifulSoup</div>
+            <ul class="resume-bullet-list" style="font-size: 0.84rem;">
+              <li>Built a portfolio analytics platform in Python using core data structures, Pandas, and SQL to track and visualize performance of 15+ stocks with real-time trend dashboards.</li>
+              <li>Implemented Linear Regression and Random Forest models for price trend prediction (MAE 3.2%) and engineered RSI & MACD indicators, improving performance by ~22%.</li>
+              <li>Integrated news sentiment analysis (VADER + BeautifulSoup) to incorporate real-time market signals, improving portfolio decision accuracy by ~18% in back-tests.</li>
+            </ul>
+          </div>
+
+          <!-- Education -->
+          <div class="resume-section-title">EDUCATION</div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.88rem;">
+            <div>
+              <strong style="color: #ffffff;">Bachelor of Technology, Computer Science & Engineering</strong><br />
+              <span style="color: var(--text-secondary);">SRM Institute of Science and Technology, Ghaziabad, India</span>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-accent);">Sep 2022 – May 2026</span><br />
+              <strong style="color: #34d399;">CGPA: 8.0 / 10.0</strong>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="resume-section-title">CERTIFICATIONS & LEADERSHIP</div>
+          <ul class="resume-bullet-list" style="font-size: 0.84rem;">
+            <li><strong>OCI AI Foundations Associate</strong> – Oracle University (2025)</li>
+            <li><strong>Database Management System (DBMS)</strong> – NPTEL (2024)</li>
+            <li><strong>Machine Learning</strong> – Coursera</li>
+            <li><strong>INNOVATE 2024:</strong> Public Relations Member for national tech fest (RoboWars, CodePen).</li>
+            <li><strong>RUBAROO CULTURAL FEST:</strong> Management Volunteer coordinating events for 5,000+ attendees.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT DETAILS MODAL -->
+    <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-proj-title">
+      <div class="modal-container">
+        <button class="modal-close-btn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <h3 id="modal-proj-title" style="font-size: 1.6rem; margin-bottom: 0.25rem;">Project Title</h3>
+        <p id="modal-proj-meta" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-accent); margin-bottom: 1.25rem;">Role • Timeline</p>
+
+        <p id="modal-proj-summary" style="margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.7; color: var(--text-primary);">
+          Project summary will appear here.
+        </p>
+
+        <div style="margin-bottom: 1.25rem;">
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.5rem;">Tech Stack</h4>
+          <div id="modal-proj-tags" class="project-tags"></div>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.5rem;">Key Engineering Achievements</h4>
+          <ul id="modal-proj-bullets" class="resume-bullet-list" style="color: var(--text-secondary);"></ul>
+        </div>
+
+        <div style="display: flex; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+          <a id="modal-proj-github" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>View Code on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
