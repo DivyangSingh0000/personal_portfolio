@@ -134,11 +134,12 @@ function initTypingEffect() {
   if (!typedSpan) return;
 
   const roles = [
-    "AI / ML Engineer",
-    "Generative AI Specialist",
-    "RAG & LLM Architect",
-    "Data Analytics Engineer",
-    "FastAPI & Python Developer"
+     "Machine Learning Engineer",
+     "Generative AI Specialist",
+     "AI Engineer",
+     "Agentic AI Engineer",
+     "Data Analytics Engineer",
+     "Python Developer"
   ];
 
   let roleIndex = 0;
