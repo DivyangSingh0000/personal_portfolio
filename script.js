@@ -24,7 +24,7 @@ function initScrollProgress() {
   window.addEventListener('scroll', () => {
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = (window.scrollY / totalHeight) * 100;
-    
+
     if (progressBar) {
       progressBar.style.width = `${scrollPercent}%`;
     }
@@ -78,7 +78,7 @@ function initNavbar() {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#' || !targetId.startsWith('#')) return;
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
@@ -148,7 +148,7 @@ function initTypingEffect() {
 
   function type() {
     const currentRole = roles[roleIndex];
-    
+
     if (isDeleting) {
       typedSpan.textContent = currentRole.substring(0, charIndex - 1);
       charIndex--;
@@ -160,12 +160,12 @@ function initTypingEffect() {
     }
 
     if (!isDeleting && charIndex === currentRole.length) {
-      typingSpeed = 1800; // Pause at end
+      typingSpeed = 1800;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       roleIndex = (roleIndex + 1) % roles.length;
-      typingSpeed = 400; // Pause before typing new word
+      typingSpeed = 400;
     }
 
     setTimeout(type, typingSpeed);
@@ -219,7 +219,6 @@ function initContactForm() {
 
     let isValid = true;
 
-    // Name Validation
     if (!nameInput.value.trim()) {
       showError(nameInput, 'Please enter your name');
       isValid = false;
@@ -227,7 +226,6 @@ function initContactForm() {
       clearError(nameInput);
     }
 
-    // Email Validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value.trim())) {
       showError(emailInput, 'Please enter a valid email address');
@@ -236,7 +234,6 @@ function initContactForm() {
       clearError(emailInput);
     }
 
-    // Message Validation
     if (messageInput.value.trim().length < 5) {
       showError(messageInput, 'Message should be at least 5 characters long');
       isValid = false;
@@ -267,7 +264,6 @@ function initContactForm() {
 
         showToast('Thank you! Your message has been prepared.');
 
-        // Revert button text after 3s
         setTimeout(() => {
           submitBtn.innerHTML = `
             <span>Send Message</span>
@@ -302,10 +298,10 @@ function initContactForm() {
 const projectData = {
   'rag-paper': {
     title: 'AI Research Paper Analysis Tool',
-    timeline: 'February 2026 – March 2026',
+    timeline: 'Feb 2026 – Mar 2026',
     role: 'Lead AI/ML Engineer',
     stack: ['Python', 'NLP', 'LLM', 'LangChain', 'PyTorch', 'FastAPI', 'FAISS', 'Sentence Transformers'],
-    summary: 'Engineered an enterprise-grade Retrieval-Augmented Generation (RAG) system capable of parsing, indexing, and performing semantic question-answering over 150+ complex academic research papers with sub-2s query latency.',
+    summary: 'Engineered an enterprise-grade Retrieval-Augmented Generation (RAG) system capable of parsing, indexing, and performing semantic question-answering over 150+ complex academic research papers.',
     achievements: [
       'Engineered a RAG pipeline using FAISS vector database and Sentence Transformers, achieving approximately 92% semantic similarity retrieval accuracy across 150+ research papers.',
       'Built an end-to-end AI/ML data pipeline (PDF parsing, chunking, indexing, embedding, LLM-based Q&A) using LangChain, Hugging Face Transformers, and PyTorch.',
@@ -316,7 +312,7 @@ const projectData = {
   },
   'study-chat': {
     title: 'Smart Study Chat App',
-    timeline: 'June 2025 – July 2025',
+    timeline: 'Jun 2025 – Jul 2025',
     role: 'Full-Stack GenAI Developer',
     stack: ['Python', 'Streamlit', 'OpenAI API', 'LangChain', 'FAISS', 'Hugging Face'],
     summary: 'Developed a multi-PDF AI question-answering application designed for students and researchers to upload multiple study documents and receive context-accurate explanations with precise page citations.',
@@ -330,9 +326,9 @@ const projectData = {
   },
   'stock-tracker': {
     title: 'Stock Market Portfolio Tracker',
-    timeline: 'May 2025 – June 2025',
+    timeline: 'May 2025 – Jun 2025',
     role: 'Data Science & ML Developer',
-    stack: ['Python', 'Pandas', 'SQL', 'Scikit-learn', 'Matplotlib'],
+    stack: ['Python', 'Pandas', 'SQL', 'Scikit-learn', 'Matplotlib', 'VADER', 'BeautifulSoup'],
     summary: 'Built a predictive portfolio analytics platform combining algorithmic data structures, machine learning regression models, and natural language sentiment analysis of real-time financial news.',
     achievements: [
       'Built a portfolio analytics platform in Python using core data structures & algorithms, Pandas, and SQL to track and visualize performance of 15+ stocks with real-time trend dashboards.',
@@ -345,7 +341,6 @@ const projectData = {
 };
 
 function initModals() {
-  // Resume Modal Triggers
   const openResumeButtons = document.querySelectorAll('.open-resume-modal');
   const resumeModal = document.getElementById('resume-modal');
 
@@ -359,7 +354,6 @@ function initModals() {
     });
   });
 
-  // Project Details Modal Triggers
   const projectDetailsButtons = document.querySelectorAll('.open-project-details');
   const projectModal = document.getElementById('project-modal');
 
@@ -373,7 +367,7 @@ function initModals() {
       document.getElementById('modal-proj-title').textContent = data.title;
       document.getElementById('modal-proj-meta').textContent = `${data.role} • ${data.timeline}`;
       document.getElementById('modal-proj-summary').textContent = data.summary;
-      
+
       const tagsContainer = document.getElementById('modal-proj-tags');
       tagsContainer.innerHTML = data.stack.map(tag => `<span class="tag tag-highlight">${tag}</span>`).join('');
 
@@ -390,7 +384,6 @@ function initModals() {
     });
   });
 
-  // Close Modals
   document.querySelectorAll('.modal-close-btn, .modal-backdrop').forEach(closer => {
     closer.addEventListener('click', function(e) {
       if (e.target === this) {
@@ -400,24 +393,22 @@ function initModals() {
     });
   });
 
-  // Download Resume PDF Trigger
-const printBtn = document.getElementById('print-resume-btn');
-if (printBtn) {
-  printBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+  const printBtn = document.getElementById('print-resume-btn');
+  if (printBtn) {
+    printBtn.addEventListener('click', (e) => {
+      e.preventDefault();
 
-    const link = document.createElement('a');
-    link.href = './assets/Divyang_Singh_Somvanshi_Engineer_Resume.pdf';
-    link.download = 'Divyang_Singh_Somvanshi_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
+      const link = document.createElement('a');
+      link.href = './assets/Resume.pdf';
+      link.download = 'Divyang_Singh_Somvanshi_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
 
-    showToast('Resume download started!');
-  });
-}
+      showToast('Resume download started!');
+    });
+  }
 
-  // Copy Email Helper
   const copyEmailBtns = document.querySelectorAll('.copy-email-btn');
   copyEmailBtns.forEach(btn => {
     btn.addEventListener('click', () => {
