@@ -302,7 +302,7 @@ function initContactForm() {
 const projectData = {
   'rag-paper': {
     title: 'AI Research Paper Analysis Tool',
-    timeline: 'Feb 2026 – Mar 2026',
+    timeline: 'February 2026 – March 2026',
     role: 'Lead AI/ML Engineer',
     stack: ['Python', 'NLP', 'LLM', 'LangChain', 'PyTorch', 'FastAPI', 'FAISS', 'Sentence Transformers'],
     summary: 'Engineered an enterprise-grade Retrieval-Augmented Generation (RAG) system capable of parsing, indexing, and performing semantic question-answering over 150+ complex academic research papers with sub-2s query latency.',
@@ -316,7 +316,7 @@ const projectData = {
   },
   'study-chat': {
     title: 'Smart Study Chat App',
-    timeline: 'Jun 2025 – Jul 2025',
+    timeline: 'June 2025 – July 2025',
     role: 'Full-Stack GenAI Developer',
     stack: ['Python', 'Streamlit', 'OpenAI API', 'LangChain', 'FAISS', 'Hugging Face'],
     summary: 'Developed a multi-PDF AI question-answering application designed for students and researchers to upload multiple study documents and receive context-accurate explanations with precise page citations.',
@@ -330,9 +330,9 @@ const projectData = {
   },
   'stock-tracker': {
     title: 'Stock Market Portfolio Tracker',
-    timeline: 'May 2025 – Jun 2025',
+    timeline: 'May 2025 – June 2025',
     role: 'Data Science & ML Developer',
-    stack: ['Python', 'Pandas', 'SQL', 'Scikit-learn', 'Matplotlib', 'VADER', 'BeautifulSoup'],
+    stack: ['Python', 'Pandas', 'SQL', 'Scikit-learn', 'Matplotlib'],
     summary: 'Built a predictive portfolio analytics platform combining algorithmic data structures, machine learning regression models, and natural language sentiment analysis of real-time financial news.',
     achievements: [
       'Built a portfolio analytics platform in Python using core data structures & algorithms, Pandas, and SQL to track and visualize performance of 15+ stocks with real-time trend dashboards.',
@@ -400,13 +400,22 @@ function initModals() {
     });
   });
 
-  // Print Resume Trigger
-  const printBtn = document.getElementById('print-resume-btn');
-  if (printBtn) {
-    printBtn.addEventListener('click', () => {
-      window.print();
-    });
-  }
+  // Download Resume PDF Trigger
+const printBtn = document.getElementById('print-resume-btn');
+if (printBtn) {
+  printBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const link = document.createElement('a');
+    link.href = '.assets/Divyang_Singh_Somvanshi_Engineer_Resume.pdf';
+    link.download = 'Divyang_Singh_Somvanshi_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    showToast('Resume download started!');
+  });
+}
 
   // Copy Email Helper
   const copyEmailBtns = document.querySelectorAll('.copy-email-btn');
