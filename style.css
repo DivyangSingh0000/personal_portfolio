@@ -1239,6 +1239,33 @@ a {
   font-weight: 600;
 }
 
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-accent);
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.cert-link:hover {
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.25);
+  border-color: var(--border-focus);
+  transform: translateY(-2px);
+}
+
+.cert-link svg {
+  flex-shrink: 0;
+}
+
 /* ==========================================================================
    CONTACT SECTION
    ========================================================================== */
