@@ -407,7 +407,7 @@ if (printBtn) {
     e.preventDefault();
 
     const link = document.createElement('a');
-    link.href = '.assets/Divyang_Singh_Somvanshi_Engineer_Resume.pdf';
+    link.href = './assets/Divyang_Singh_Somvanshi_Engineer_Resume.pdf';
     link.download = 'Divyang_Singh_Somvanshi_Resume.pdf';
     document.body.appendChild(link);
     link.click();
